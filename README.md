@@ -42,8 +42,10 @@ cd /opt/kasm/bin
 Wait for Kasm to stop completely, which might take several minutes. Then, run this to install the add-on:
 
 ```
-echo "# Keepalive Add-on\n./kasm-addons/kasm_keepalive &" >> start
-echo "# Keepalive Add-on\n#kill $(pgrep -f ./kasm-addons/kasm_keepalive)" >> stop
+echo "# Keepalive Add-on
+./kasm-addons/kasm_keepalive &" >> start
+echo "# Keepalive Add-on
+kill $(pgrep -f ./kasm-addons/kasm_keepalive)" >> stop
 ```
 
 Finally, start Kasm again.
