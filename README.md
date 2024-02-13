@@ -37,10 +37,18 @@ To use this addon, run these commands:
 ```
 cd /opt/kasm/bin
 ./stop
+```
 
+Wait for Kasm to stop completely, which might take several minutes. Then, run this to install the add-on:
+
+```
 echo "# Keepalive Add-on\n./kasm-addons/kasm_keepalive &" >> start
 echo "# Keepalive Add-on\n#kill $(pgrep -f ./kasm-addons/kasm_keepalive)" >> stop
+```
 
+Finally, start Kasm again.
+
+```
 ./start
 ```
 
