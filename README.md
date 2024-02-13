@@ -45,7 +45,7 @@ Wait for Kasm to stop completely, which might take several minutes. Then, run th
 echo "# Keepalive Add-on
 ./kasm-addons/kasm_keepalive &" >> start
 echo "# Keepalive Add-on
-kill $(pgrep -f ./kasm-addons/kasm_keepalive)" >> stop
+kill \$(pgrep -f ./kasm-addons/kasm_keepalive)" >> stop
 ```
 
 Finally, start Kasm again.
