@@ -2,8 +2,8 @@
 
 while true; do
 
-        DATE=$(date +"%Y-%m-%d %H:%M:%S.%N")
-        NEW_DATE=$(date -d "$current_date + 1 hour" +"%Y-%m-%d %H:%M:%S.%N")
+        DATE=$(date -u +"%Y-%m-%d %H:%M:%S.%N")
+        NEW_DATE=$(date -u -d "$current_date + 1 hour" +"%Y-%m-%d %H:%M:%S.%N")
 
         sudo docker exec kasm_db psql -U kasmapp -d kasm -c "UPDATE kasms
         SET keepalive_date='$DATE',expiration_date='$NEW_DATE';" > /dev/null
